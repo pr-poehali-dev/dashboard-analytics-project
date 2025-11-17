@@ -166,32 +166,51 @@ const Index = () => {
               ))}
             </div>
 
-            <Card className="p-6 glass-effect animate-fade-in">
-              <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                <Icon name="TrendingUp" size={20} />
-                Динамика продаж за неделю
-              </h2>
-              <div className="flex items-end gap-4 h-64">
-                {salesData.map((data, index) => (
-                  <div key={data.day} className="flex-1 flex flex-col items-center gap-2">
-                    <div className="w-full relative" style={{ height: '200px' }}>
-                      <div 
-                        className="w-full gradient-purple rounded-t-lg absolute bottom-0 hover:opacity-80 transition-opacity cursor-pointer animate-slide-in-right"
-                        style={{ 
-                          height: `${(data.value / maxValue) * 100}%`,
-                          animationDelay: `${index * 50}ms`
-                        }}
-                      >
-                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-sm font-semibold bg-purple-500/20 px-2 py-1 rounded">
-                          {data.value}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="p-6 glass-effect animate-fade-in">
+                <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
+                  <Icon name="TrendingUp" size={20} />
+                  Динамика продаж за неделю
+                </h2>
+                <div className="flex items-end gap-4 h-64">
+                  {salesData.map((data, index) => (
+                    <div key={data.day} className="flex-1 flex flex-col items-center gap-2">
+                      <div className="w-full relative" style={{ height: '200px' }}>
+                        <div 
+                          className="w-full gradient-purple rounded-t-lg absolute bottom-0 hover:opacity-80 transition-opacity cursor-pointer animate-slide-in-right"
+                          style={{ 
+                            height: `${(data.value / maxValue) * 100}%`,
+                            animationDelay: `${index * 50}ms`
+                          }}
+                        >
+                          <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-sm font-semibold bg-purple-500/20 px-2 py-1 rounded">
+                            {data.value}
+                          </div>
                         </div>
                       </div>
+                      <span className="text-sm text-muted-foreground font-medium">{data.day}</span>
                     </div>
-                    <span className="text-sm text-muted-foreground font-medium">{data.day}</span>
-                  </div>
-                ))}
-              </div>
-            </Card>
+                  ))}
+                </div>
+              </Card>
+
+              <Card className="p-6 glass-effect animate-fade-in">
+                <h3 className="text-lg font-bold mb-4">ROI по каналам</h3>
+                <div className="space-y-3">
+                  {['Email: 340%', 'Органика: 280%', 'Яндекс: 210%', 'Google: 185%'].map((item, index) => (
+                    <div key={item} className="flex items-center gap-3">
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div 
+                          className="h-full gradient-orange rounded-full transition-all duration-500"
+                          style={{ width: `${(4 - index) * 25}%` }}
+                        />
+                      </div>
+                      <span className="text-sm font-medium whitespace-nowrap">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            </div>
           </TabsContent>
 
           <TabsContent value="metrics" className="space-y-6 mt-6">
