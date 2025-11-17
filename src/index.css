@@ -6,39 +6,35 @@
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 0%;
+    --foreground: 120 10% 95%;
 
-    --card: 226 45% 15%;
-    --card-foreground: 210 40% 98%;
+    --card: 120 10% 8%;
+    --card-foreground: 120 10% 95%;
 
-    --popover: 226 45% 15%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 120 10% 8%;
+    --popover-foreground: 120 10% 95%;
 
-    --primary: 263 70% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 120 10% 95%;
 
-    --secondary: 291 64% 60%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 142 50% 25%;
+    --secondary-foreground: 120 10% 95%;
 
-    --muted: 226 45% 20%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 120 10% 15%;
+    --muted-foreground: 120 8% 55%;
 
-    --accent: 199 89% 48%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 120 10% 95%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 120 10% 95%;
 
-    --border: 226 45% 25%;
-    --input: 226 45% 20%;
-    --ring: 263 70% 60%;
+    --border: 142 40% 20%;
+    --input: 120 10% 12%;
+    --ring: 142 76% 36%;
 
     --radius: 1rem;
-
-    --gradient-purple: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
-    --gradient-blue: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
-    --gradient-orange: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
   }
 }
 
@@ -74,21 +70,25 @@
 }
 
 @layer utilities {
-  .gradient-purple {
-    background: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+  .gradient-green {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
   }
 
-  .gradient-blue {
-    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+  .gradient-green-light {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    box-shadow: 0 0 30px rgba(52, 211, 153, 0.3);
   }
 
-  .gradient-orange {
-    background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  .gradient-green-dark {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    box-shadow: 0 0 30px rgba(5, 150, 105, 0.3);
   }
 
   .glass-effect {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(16, 185, 129, 0.05);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
   }
 }
