@@ -56,7 +56,7 @@ const SourceRow = ({
       <div className="flex items-center gap-2">
         <div className="flex-1 bg-muted rounded-full h-2 overflow-hidden">
           <div 
-            className="h-full gradient-green transition-all duration-500" 
+            className="h-full gradient-cyan transition-all duration-500" 
             style={{ width: `${conversionValue}%` }}
           />
         </div>
@@ -76,28 +76,28 @@ const Index = () => {
       value: '₽2,847,392',
       change: '+12.5%',
       icon: 'TrendingUp',
-      gradient: 'gradient-green'
+      gradient: 'gradient-cyan'
     },
     {
       title: 'Средний чек',
       value: '₽4,235',
       change: '+8.2%',
       icon: 'DollarSign',
-      gradient: 'gradient-green-light'
+      gradient: 'gradient-cyan-light'
     },
     {
       title: 'Количество продаж',
       value: '672',
       change: '+15.7%',
       icon: 'ShoppingCart',
-      gradient: 'gradient-green-dark'
+      gradient: 'gradient-cyan-dark'
     },
     {
       title: 'Конверсия',
       value: '3.8%',
       change: '-2.1%',
       icon: 'Target',
-      gradient: 'gradient-green'
+      gradient: 'gradient-cyan'
     }
   ];
 
@@ -126,32 +126,32 @@ const Index = () => {
       <div className="max-w-7xl mx-auto space-y-8">
         <div className="flex items-center justify-between animate-fade-in">
           <div>
-            <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
               Дашборд аналитики
             </h1>
             <p className="text-muted-foreground">Мониторинг ключевых показателей в реальном времени</p>
           </div>
           <div className="flex items-center gap-2 glass-effect px-4 py-2 rounded-lg">
-            <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse-glow"></div>
-            <span className="text-sm font-medium">Live</span>
+            <div className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse-glow"></div>
+            <span className="text-sm font-medium text-cyan-600">Live</span>
           </div>
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid grid-cols-4 w-fit bg-muted/50 p-1">
-            <TabsTrigger value="overview" className="data-[state=active]:gradient-green data-[state=active]:text-white">
+            <TabsTrigger value="overview" className="data-[state=active]:gradient-cyan data-[state=active]:text-white">
               <Icon name="LayoutDashboard" size={16} className="mr-2" />
               Обзор
             </TabsTrigger>
-            <TabsTrigger value="metrics" className="data-[state=active]:gradient-green data-[state=active]:text-white">
+            <TabsTrigger value="metrics" className="data-[state=active]:gradient-cyan data-[state=active]:text-white">
               <Icon name="BarChart3" size={16} className="mr-2" />
               Метрики
             </TabsTrigger>
-            <TabsTrigger value="analytics" className="data-[state=active]:gradient-green data-[state=active]:text-white">
+            <TabsTrigger value="analytics" className="data-[state=active]:gradient-cyan data-[state=active]:text-white">
               <Icon name="LineChart" size={16} className="mr-2" />
               Аналитика
             </TabsTrigger>
-            <TabsTrigger value="sources" className="data-[state=active]:gradient-green data-[state=active]:text-white">
+            <TabsTrigger value="sources" className="data-[state=active]:gradient-cyan data-[state=active]:text-white">
               <Icon name="Globe" size={16} className="mr-2" />
               Источники
             </TabsTrigger>
@@ -177,13 +177,13 @@ const Index = () => {
                     <div key={data.day} className="flex-1 flex flex-col items-center gap-2">
                       <div className="w-full relative" style={{ height: '200px' }}>
                         <div 
-                          className="w-full gradient-green rounded-t-lg absolute bottom-0 hover:opacity-80 transition-opacity cursor-pointer animate-slide-in-right"
+                          className="w-full gradient-cyan rounded-t-lg absolute bottom-0 hover:opacity-80 transition-opacity cursor-pointer animate-slide-in-right"
                           style={{ 
                             height: `${(data.value / maxValue) * 100}%`,
                             animationDelay: `${index * 50}ms`
                           }}
                         >
-                          <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-sm font-semibold bg-emerald-500/20 px-2 py-1 rounded">
+                          <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-sm font-semibold bg-cyan-500/20 px-2 py-1 rounded text-cyan-700">
                             {data.value}
                           </div>
                         </div>
@@ -254,13 +254,13 @@ const Index = () => {
                   <div key={data.day} className="flex-1 flex flex-col items-center gap-2">
                     <div className="w-full relative" style={{ height: '200px' }}>
                       <div 
-                        className="w-full gradient-green-light rounded-t-lg absolute bottom-0 hover:opacity-80 transition-opacity cursor-pointer animate-slide-in-right"
+                        className="w-full gradient-cyan-light rounded-t-lg absolute bottom-0 hover:opacity-80 transition-opacity cursor-pointer animate-slide-in-right"
                         style={{ 
                           height: `${(data.value / maxValue) * 100}%`,
                           animationDelay: `${index * 50}ms`
                         }}
                       >
-                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-sm font-semibold bg-emerald-500/20 px-2 py-1 rounded">
+                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-sm font-semibold bg-cyan-500/20 px-2 py-1 rounded text-cyan-700">
                           {data.value}
                         </div>
                       </div>

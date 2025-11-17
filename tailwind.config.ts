@@ -94,8 +94,8 @@ export default {
 					'100%': { transform: 'translateX(0)', opacity: '1' }
 				},
 				'pulse-glow': {
-					'0%, 100%': { boxShadow: '0 0 20px rgba(16, 185, 129, 0.4)' },
-					'50%': { boxShadow: '0 0 40px rgba(16, 185, 129, 0.8)' }
+					'0%, 100%': { boxShadow: '0 0 20px rgba(6, 182, 212, 0.5)' },
+					'50%': { boxShadow: '0 0 50px rgba(6, 182, 212, 0.8)' }
 				},
 				'shimmer': {
 					'0%': { backgroundPosition: '-1000px 0' },

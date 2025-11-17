@@ -6,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 120 10% 95%;
+    --background: 0 0% 100%;
+    --foreground: 200 15% 10%;
 
-    --card: 120 10% 8%;
-    --card-foreground: 120 10% 95%;
+    --card: 0 0% 98%;
+    --card-foreground: 200 15% 10%;
 
-    --popover: 120 10% 8%;
-    --popover-foreground: 120 10% 95%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 200 15% 10%;
 
-    --primary: 142 76% 36%;
-    --primary-foreground: 120 10% 95%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 142 50% 25%;
-    --secondary-foreground: 120 10% 95%;
+    --secondary: 199 70% 60%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 120 10% 15%;
-    --muted-foreground: 120 8% 55%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 200 10% 45%;
 
-    --accent: 142 76% 36%;
-    --accent-foreground: 120 10% 95%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 120 10% 95%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 142 40% 20%;
-    --input: 120 10% 12%;
-    --ring: 142 76% 36%;
+    --border: 199 30% 85%;
+    --input: 0 0% 95%;
+    --ring: 199 89% 48%;
 
     --radius: 1rem;
   }
@@ -70,25 +70,33 @@
 }
 
 @layer utilities {
-  .gradient-green {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+  .gradient-cyan {
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    box-shadow:
+      0 0 30px rgba(6, 182, 212, 0.4),
+      0 0 60px rgba(6, 182, 212, 0.2);
   }
 
-  .gradient-green-light {
-    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
-    box-shadow: 0 0 30px rgba(52, 211, 153, 0.3);
+  .gradient-cyan-light {
+    background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);
+    box-shadow:
+      0 0 30px rgba(34, 211, 238, 0.4),
+      0 0 60px rgba(34, 211, 238, 0.2);
   }
 
-  .gradient-green-dark {
-    background: linear-gradient(135deg, #059669 0%, #047857 100%);
-    box-shadow: 0 0 30px rgba(5, 150, 105, 0.3);
+  .gradient-cyan-dark {
+    background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+    box-shadow:
+      0 0 30px rgba(8, 145, 178, 0.4),
+      0 0 60px rgba(8, 145, 178, 0.2);
   }
 
   .glass-effect {
-    background: rgba(16, 185, 129, 0.05);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(16, 185, 129, 0.2);
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    box-shadow:
+      0 4px 20px rgba(6, 182, 212, 0.1),
+      0 0 40px rgba(6, 182, 212, 0.05);
   }
 }
